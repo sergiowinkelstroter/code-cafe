@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  max-width: 375px;
+  height: 100vh;
+  font-family: "Source Serif Pro", serif;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1.4rem 4rem 1.4rem;
+  gap: 3rem;
+}
+
+header .content a {
+  color: #000000;
+}
+
+header .content li {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+main .painel {
+  position: relative;
+}
+
+main .painel img {
+  width: 100%;
+  height: 200px;
+}
+
+main .painel p {
+  position: absolute;
+  top: 6rem;
+  left: 5rem;
+  color: #fff;
+  font-size: 20px;
+}
+
+#quem {
+  text-align: center;
+  margin-block: 6rem;
+}
+
+#quem h4 {
+  margin-block: 4rem;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#quem p {
+  font-size: 18px;
+  margin-inline: 3rem;
+}
+
+.section_img img {
+  width: 100%;
+  height: auto;
+}
+
+#onde {
+  text-align: center;
+  margin-block: 6rem;
+}
+
+#onde h4 {
+  margin-block: 4rem;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#onde p {
+  font-size: 18px;
+  margin-inline: 2rem;
+}
+
+#contato {
+  position: relative;
+}
+
+#contato .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-inline: 2.5rem;
+  position: absolute;
+  top: 8rem;
+  color: #fff;
+}
+
+#contato .container h4 {
+  font-size: 40px;
+}
+
+#contato .container p {
+  font-size: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #000000;
+  color: #fff;
+}
+
+footer img {
+  margin-bottom: 5rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+footer a {
+  color: #fff;
+  font-size: 20px;
+}
+
+footer .redes-sociais i {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 25px;
+}
