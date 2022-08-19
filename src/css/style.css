@@ -12,10 +12,13 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   width: 100%;
-  max-width: 100%;
-  height: 100vh;
+  height: 100%;
+}
+
+body {
   font-family: "Source Serif Pro", serif;
   margin: auto;
   transition: 0.4s;
@@ -23,6 +26,12 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
 }
 
 header .content {
@@ -157,7 +166,38 @@ footer .redes-sociais i {
   font-size: 25px;
 }
 
-@media screen and (min-width: 500px) {
+/* BACK TO TOP */
+
+#bntScrollToTop {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #8e5b5a;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  cursor: pointer;
+}
+
+#bntScrollToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+  .wrapper {
+    width: min(112rem, 100%);
+  }
   header .content {
     display: flex;
     flex-direction: row;
@@ -176,26 +216,42 @@ footer .redes-sociais i {
   }
 
   main .painel p {
-    position: inherit;
-    top: 12rem;
-    left: 12rem;
-    font-size: 5rem;
+    font-size: 50px;
+    top: 250px;
+    left: 350px;
   }
 
-  .section_img {
+  .section_img .wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 20vw);
+    grid-template-areas:
+      "img01 img01 img02 img2"
+      "img01 img01 img04 img4";
   }
-  .section_img .img01 {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  .section_img .wrapper .img01 {
+    grid-area: img01;
   }
-  .section_img .img04 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
+  .section_img .wrapper .img02 {
+    grid-area: img02;
+  }
+  .section_img .wrapper .img03 {
+    grid-area: img03;
+  }
+  .section_img .wrapper .img04 {
+    grid-area: img04;
+  }
+
+  #contato .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 57.5rem;
+    grid-template-areas: "A B";
+  }
+
+  #contato .wrapper img {
+    grid-area: A;
+  }
+
+  #contato .container {
+    grid-area: B;
   }
 
   footer {
